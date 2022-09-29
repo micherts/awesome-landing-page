@@ -10,11 +10,13 @@ Import-Module AWS.Tools.Route53
 #Domain Set Up Process
 #Route53 - Register domain names.
 #S3 - Create bucket with public access
+#Remove-S3Bucket -Region $Region -BucketName $App -Force -Verbose
  New-S3Bucket -Region $Region -BucketName $App -CannedACLName public-read
  Write-S3BucketWebsite -BucketName $App -WebsiteConfiguration_IndexDocumentSuffix index.html -WebsiteConfiguration_ErrorDocument error.html
  $Policy = [PSCustomObject]@{Version = "2012-10-17"; Statement = [PSCustomObject]@{Sid = "PublicReadGetObject"; Effect = "Allow"; Principal = "*"; Action = @("s3:GetObject"); Resource = @("arn:aws:s3:::$App/*")}}
  Write-S3BucketPolicy -BucketName $App -Policy ($Policy | ConvertTo-Json)
 #S3 - Copy local files to S3
+#Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
  $Files = Get-ChildItem | Where-Object {$_.Name -ne 'manage.ps1'}
  #$Files = Get-ChildItem | Where-Object {$_.Name -eq 'index.html'}
  ForEach ($File in $Files) {
@@ -87,9 +89,6 @@ Import-Module AWS.Tools.Route53
    }
 
 
-#Delete S3
-#Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
-#Remove-S3Bucket -Region $Region -BucketName $App -Force -Verbose
 
 #Read S3
 Get-S3Object -Region $Region -BucketName $App | ft
@@ -123,8 +122,8 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated contactus.js to include subject"
-git push origin main
+git commit -m "tweaked layout"
+git push origin master
 
 #Clone Git repo
 git clone git@github.com:micherts/awesome-landing-page.git

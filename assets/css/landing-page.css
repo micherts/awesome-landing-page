@@ -530,7 +530,7 @@ i {
 }
 
 .section {
-  padding: 30px 0;
+  padding: 30px 0 0;
   position: relative;
   background-color: #ffffff;
 }
@@ -2045,7 +2045,8 @@ i {
 }
 
 .navbar {
-  background-color: rgba(33, 33, 33, 0.5);
+  background-color: white;
+  /* background-color: rgba(33, 33, 33, 0.5); */
   padding-bottom: 15px;
 }
 
