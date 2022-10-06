@@ -122,7 +122,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "removed company logos and updated text"
+git commit -m "updated layout"
 git push origin master
 
 #Clone Git repo
