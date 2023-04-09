@@ -96,11 +96,11 @@ body {
 }
 
 a {
-  color: #2ca8ff;
+  color: #4caf50;
 }
 a:hover,
 a:focus {
-  color: #109cff;
+  color: #4caf50;
   text-decoration: none;
 }
 
@@ -2052,4 +2052,8 @@ i {
 
 .section-contact {
   margin-top: 40px;
+}
+
+.text {
+  margin: 30px;
 }
