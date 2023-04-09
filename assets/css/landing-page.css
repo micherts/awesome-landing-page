@@ -710,6 +710,7 @@ i {
   margin: 15px 3px;
   line-height: 20px;
   text-align: center;
+  /* white-space: nowrap; */
 }
 .footer hr {
   border-color: #dddddd;
