@@ -2058,3 +2058,46 @@ i {
 .text {
   margin: 30px;
 }
+
+table {
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+ul {
+  counter-reset: item;
+}
+ol {
+  counter-reset: item;
+  /* list-style: none; */
+  padding-left: 0;
+}
+ol li {
+  display: block;
+  padding-bottom: 10px;
+}
+ol li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+  /* padding-right: 5px; */
+}
+ul {
+  list-style-type: square;
+}
+.dot {
+  display: list-item;
+  padding-bottom: initial;
+}
+.dot:before {
+  content: "";
+  padding-right: initial;
+}
+.indent {
+  padding-left: 30px;
+}
