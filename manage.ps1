@@ -4,6 +4,7 @@ $Region = 'ap-southeast-2'
 $RegionS3R53ZoneID = "Z1WCIGYICN2BYD" #ap-southeast-2 S3 Bucket R53 Hosted Zone ID https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints
 $App = 'hosposure.com.au' #All lowercase
 $WL = "$Home\Documents\awesome-landing-page"
+$WL = "$Home\Documents\Code\awesome-landing-page"
 Set-Location $WL
 Import-Module AWS.Tools.Route53
 
@@ -122,7 +123,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated footer"
+git commit -m "updated t&c, privacy, collection, css"
 git push origin master
 
 #Clone Git repo

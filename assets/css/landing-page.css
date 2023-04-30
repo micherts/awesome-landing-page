@@ -2055,49 +2055,35 @@ i {
   margin-top: 40px;
 }
 
+/* Terms & Privacy */
 .text {
   margin: 30px;
 }
-
-table {
+.text h1 {
+  font-size: 30px;
+}
+.text h2 {
+  font-size: 25px;
+}
+.text p,
+.text ol,
+.text ul {
+  font-size: 15px;
+}
+.text table {
   border-color: black;
   border-style: solid;
   border-width: thin;
+  width: 100%;
 }
-
-th,
-td {
+.text th,
+.text td {
+  border-color: black;
+  border-style: solid;
+  border-width: thin;
   padding: 5px;
+  vertical-align: top;
 }
-
-ul {
-  counter-reset: item;
-}
-ol {
-  counter-reset: item;
-  /* list-style: none; */
-  padding-left: 0;
-}
-ol li {
-  display: block;
-  padding-bottom: 10px;
-}
-ol li:before {
-  content: counters(item, ".") " ";
-  counter-increment: item;
-  /* padding-right: 5px; */
-}
-ul {
-  list-style-type: square;
-}
-.dot {
-  display: list-item;
-  padding-bottom: initial;
-}
-.dot:before {
-  content: "";
-  padding-right: initial;
-}
-.indent {
-  padding-left: 30px;
+.text footer div {
+  display: inline-block;
 }
