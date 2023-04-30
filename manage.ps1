@@ -4,7 +4,7 @@ $Region = 'ap-southeast-2'
 $RegionS3R53ZoneID = "Z1WCIGYICN2BYD" #ap-southeast-2 S3 Bucket R53 Hosted Zone ID https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints
 $App = 'hosposure.com.au' #All lowercase
 $WL = "$Home\Documents\awesome-landing-page"
-$WL = "$Home\Documents\Code\awesome-landing-page"
+$WL = "$Home/Documents/Code/awesome-landing-page"
 Set-Location $WL
 Import-Module AWS.Tools.Route53
 
@@ -16,6 +16,7 @@ Import-Module AWS.Tools.Route53
  Write-S3BucketWebsite -BucketName $App -WebsiteConfiguration_IndexDocumentSuffix index.html -WebsiteConfiguration_ErrorDocument error.html
  $Policy = [PSCustomObject]@{Version = "2012-10-17"; Statement = [PSCustomObject]@{Sid = "PublicReadGetObject"; Effect = "Allow"; Principal = "*"; Action = @("s3:GetObject"); Resource = @("arn:aws:s3:::$App/*")}}
  Write-S3BucketPolicy -BucketName $App -Policy ($Policy | ConvertTo-Json)
+
 #S3 - Copy local files to S3
 #Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
  $Files = Get-ChildItem | Where-Object {$_.Name -ne 'manage.ps1'}
@@ -23,12 +24,15 @@ Import-Module AWS.Tools.Route53
  ForEach ($File in $Files) {
   $FileName = [System.IO.Path]::GetFileName($File)
   If ($File.Mode -match "d") {
-    $Prefix = "$($File.FullName.ToString().replace($WL,''))\"
-    Write-S3Object -BucketName $App -Folder $File.FullName -KeyPrefix $Prefix -Recurse -Verbose -Force 
+    # $Prefix = "$($File.FullName.ToString().replace($WL,''))\"
+    $Prefix = "$($File.FullName.ToString().replace($WL,''))"
+    Write-S3Object -BucketName $App -Folder $File.Name -KeyPrefix $Prefix -Recurse -Verbose -Force 
   } else {
-  Write-S3Object -BucketName $App -Key $FileName -File $FileName -Verbose -Force 
+  # Write-S3Object -BucketName $App -Key $FileName -File $File -Verbose -Force 
+  Write-S3Object -BucketName $App -Key $FileName -File $File.Name -Verbose -Force 
   }
  }
+
 #Certificate Manager - Create new certificate for domain and *.domain.
 #Certificate Manager - Validate domains by 'Create records in Route 53' option.
 #CloudFront - Create new distribution for S3 bucket with alternate domain names domain and www.domain, default root object index.html, behaviour redirect http to https.
@@ -123,7 +127,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated t&c, privacy, collection, css"
+git commit -m "updated manage.ps1 for mac"
 git push origin master
 
 #Clone Git repo
