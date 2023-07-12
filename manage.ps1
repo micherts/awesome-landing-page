@@ -3,7 +3,7 @@ Set-AWSCredential -ProfileName AWSmicherts
 $Region = 'ap-southeast-2'
 $RegionS3R53ZoneID = "Z1WCIGYICN2BYD" #ap-southeast-2 S3 Bucket R53 Hosted Zone ID https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints
 $App = 'hosposure.com.au' #All lowercase
-$WL = "$Home\Documents\awesome-landing-page"
+$WL = "$Home\Documents\Code\awesome-landing-page"
 Set-Location $WL
 Import-Module AWS.Tools.Route53
 
@@ -106,11 +106,6 @@ $Records | ft
 
 #Create R53 Record to route apex domain to S3 bucket
 
-
-
-
-
-
 # Initialise git
 git init
 git add .
@@ -120,9 +115,25 @@ git branch -M main
 git remote add origin git@github.com:micherts/hosposure.com.au.git
 git push -u origin main
 
+
+
+#S3 - Copy local files to S3
+#Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
+ $Files = Get-ChildItem | Where-Object {$_.Name -ne 'manage.ps1'}
+ #$Files = Get-ChildItem | Where-Object {$_.Name -eq 'index.html'}
+ ForEach ($File in $Files) {
+  $FileName = [System.IO.Path]::GetFileName($File)
+  If ($File.Mode -match "d") {
+    $Prefix = "$($File.FullName.ToString().replace($WL,''))\"
+    Write-S3Object -BucketName $App -Folder $File.FullName -KeyPrefix $Prefix -Recurse -Verbose -Force 
+  } else {
+  Write-S3Object -BucketName $App -Key $FileName -File $FileName -Verbose -Force 
+  }
+ }
+
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated footer"
+git commit -m "updated layout for phone display size"
 git push origin master
 
 #Clone Git repo

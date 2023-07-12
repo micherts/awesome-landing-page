@@ -1976,7 +1976,7 @@ i {
     text-align: center;
   }
   .landing-page .navbar-top {
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.75);
   }
   .landing-page .parallax {
     height: 550px;
@@ -2014,6 +2014,9 @@ i {
   .footer:not(.footer-big) nav > ul li,
   .pull-right {
     float: none !important;
+  }
+  .welcome-hs {
+    padding-top: 80px;
   }
 }
 
@@ -2057,4 +2060,12 @@ i {
 
 .text {
   margin: 30px;
+}
+
+.sign-in-hs {
+  text-align: right;
+}
+
+.navbar-hs {
+  border-radius: 0;
 }
