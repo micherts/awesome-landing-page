@@ -530,10 +530,10 @@ i {
 }
 
 .section {
-  /* margin-bottom: 150px; */
   padding: 30px 0 0;
   position: relative;
   background-color: #ffffff;
+  margin-top: 100px;
 }
 
 .section-gray {
@@ -729,7 +729,7 @@ i {
 }
 .footer:not(.footer-big) nav > ul a {
   padding: 10px 0px;
-  margin: 15px 10px 15px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 .footer-default {
@@ -1031,8 +1031,8 @@ i {
 .header-text {
   text-transform: uppercase;
   font-weight: 200;
-  color: #333;
-  margin-bottom: 20px;
+  /* color: #333; */
+  margin-bottom: 30px;
   font-size: 30px;
   position: relative;
   line-height: 24px;
@@ -1356,7 +1356,7 @@ i {
 }
 
 .landing-page .parallax .description {
-  margin-top: 200px;
+  margin-top: 100px;
   color: white;
   padding: 5px;
 }
@@ -1418,7 +1418,7 @@ i {
   overflow: hidden;
   width: 100%;
   min-height: 600px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .landing-page .section-presentation img {
@@ -1490,7 +1490,7 @@ i {
   border-radius: 10px;
 }
 
-.landing-page .section-demo .row {
+.landing-page .row {
   margin-bottom: 50px;
 }
 
@@ -1506,11 +1506,11 @@ i {
 
 .landing-page .section-features .card {
   width: 100%;
-  min-height: 390px;
-  padding: 10px 30px;
+  /* min-height: 390px; */
+  padding: 10px 0px;
   border: 1px solid #dddddd;
   border-radius: 10px;
-  margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
 }
 .landing-page .section-features .card .icon i {
@@ -1565,6 +1565,7 @@ i {
   position: relative;
   width: 100%;
   min-height: 450px;
+  padding: 80px 0px 100px;
 }
 .landing-page .section-testimonial .carousel {
   margin-top: 50px;
@@ -1991,7 +1992,7 @@ i {
     margin-left: 20px;
   }
   .landing-page .wrapper {
-    text-align: center;
+    /* text-align: center; */
   }
   .landing-page .navbar-top {
     background: rgba(255, 255, 255, 0.75);
@@ -2016,9 +2017,9 @@ i {
   .landing-page .logos ul {
     padding-top: 20px;
   }
-  .landing-page .section-presentation {
+  /* .landing-page .section-presentation {
     margin: 0;
-  }
+  } */
   .landing-page .section-presentation {
     height: auto;
   }
@@ -2053,14 +2054,16 @@ i {
   /* font-size: 1.1rem; */
 }
 .list-checkmarks {
-  padding-left: 1.5rem;
+  padding-left: 3.5rem;
 }
 .list-checkmarks li {
   list-style-type: none;
   padding-left: 1rem;
+  font-size: 18px;
 }
 .list-checkmarks li:before {
   font-family: "FontAwesome";
+  font-size: 30px;
   content: "\f00c";
   margin: 0 10px 0 -28px;
   color: #4caf50;
@@ -2069,7 +2072,7 @@ i {
 .navbar {
   background-color: white;
   /* background-color: rgba(33, 33, 33, 0.5); */
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 
 .section-contact {
@@ -2095,17 +2098,50 @@ i {
 .image-hs {
   max-width: 700px;
   /* max-height: 500px; */
+  /* position: relative; */
+  padding-top: 10px;
 }
 
 .image-hs img {
   max-width: 100%;
   /* max-height: 100%; */
+  border-radius: 15px;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.23);
+  width: 98%;
+  /* margin: auto;
+  position: absolute;
+  top: 50%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
 }
 
 .image2-hs img {
   padding-bottom: 70px;
 }
 
-.section-hs {
-  margin-bottom: 150px;
+.material-symbols-outlined {
+  font-size: 60px;
+  color: #4caf50;
+}
+
+#sign-up-button {
+  margin-top: 30px;
+}
+
+.footer .row {
+  margin: 20px 0;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer li {
+  /* display: block; */
+  flex: 0 1 auto;
+  /* list-style-type: none; */
+  /* margin: auto; */
+  text-align: center;
 }
