@@ -530,18 +530,20 @@ i {
 }
 
 .section {
-  padding: 30px 0 0;
   position: relative;
   background-color: #ffffff;
   margin-top: 100px;
 }
 
 .section-gray {
+  padding-top: 30px;
+  margin-bottom: 0px;
   background-color: #eeeeee;
 }
 
 .section-white {
   background-color: #ffffff;
+  padding-top: 30px;
 }
 
 .navbar {
@@ -1320,7 +1322,7 @@ i {
 }
 .landing-page .parallax .parallax-background img {
   width: 100%;
-  height: auto;
+  height: 100%;
   position: relative;
 }
 .landing-page .parallax .parallax-image {
@@ -1471,7 +1473,7 @@ i {
 }
 
 .landing-page .section-demo {
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 .landing-page .section-demo a {
@@ -2144,4 +2146,14 @@ i {
   /* list-style-type: none; */
   /* margin: auto; */
   text-align: center;
+}
+
+.parallax-hs {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.decription-parallax-hs {
+  flex: 1;
 }
