@@ -125,7 +125,7 @@ git push -u origin main
 #S3 - Copy local files to S3
 #Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
  $Files = Get-ChildItem | Where-Object {$_.Name -ne 'manage.ps1'}
- #$Files = Get-ChildItem | Where-Object {$_.Name -eq 'hospoSureLogo.png'}
+ #$Files = Get-ChildItem | Where-Object {$_.Name -eq 'index.html'}
  ForEach ($File in $Files) {
   $FileName = [System.IO.Path]::GetFileName($File)
   If ($File.Mode -match "d") {
@@ -138,7 +138,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated layout of parallax section"
+git commit -m "updated wording for subscribe and features sections"
 git push origin master
 
 #Clone Git repo
