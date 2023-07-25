@@ -138,7 +138,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "updated wording for subscribe and features sections"
+git commit -m "added icons and links for socials"
 git push origin master
 
 #Clone Git repo
