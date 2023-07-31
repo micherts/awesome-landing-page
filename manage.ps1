@@ -138,7 +138,7 @@ git push -u origin main
 
 # Update git **Note git used for backup only, S3 used for primary storage
 git add .
-git commit -m "added s3SyncWorkflow.yml"
+git commit -m "updated s3SyncWorkflow.yml to set exclude directories"
 git push origin master
 
 #Clone Git repo
