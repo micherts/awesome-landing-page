@@ -124,7 +124,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated contactus.js lambda url to use node script"
+git commit -m "updated contactus.js CORS origin"
 git push origin master
 
 #Clone Git repo

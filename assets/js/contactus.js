@@ -75,6 +75,7 @@ function submitToAPI(e) {
   // send POST request
   fetch(url, {
     method: "POST",
+    origin: "https://hosposure.com.au",
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
