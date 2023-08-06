@@ -82,7 +82,7 @@ function submitToAPI(e) {
     },
   })
     .then((response) => {
-      if (response.httpStatusCode === 200) {
+      if (response.status === 200) {
         alert(
           "Thank you for your interest in HospoSure, we look forward to chatting."
         );
