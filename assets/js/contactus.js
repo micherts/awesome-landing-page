@@ -1,6 +1,8 @@
 function submitToAPI(e) {
   e.preventDefault();
-  var url = "https://6gcdonb7r7.execute-api.ap-southeast-2.amazonaws.com";
+  // var url = "https://6gcdonb7r7.execute-api.ap-southeast-2.amazonaws.com"; // Powershell version
+  var url =
+    "https://w3ropshyh65eomdjyxnhn2v4wm0tfdgj.lambda-url.ap-southeast-2.on.aws/"; // Amplify staging
 
   var mandatory = /[A-Za-z0-9\W]/;
   if (!mandatory.test($("#form_name").val())) {
@@ -54,7 +56,7 @@ function submitToAPI(e) {
   // var costing = $("#form_costing").val();
   // var message = $("#form_message").val();
   var data = {
-    subject: "Contact Form",
+    subject: "HospoSure Contact Form",
     name: $("#form_name").val(),
     email: $("#form_email").val(),
     // telephone: $("#form_telephone").val(),
@@ -85,5 +87,8 @@ function submitToAPI(e) {
       document.getElementById("contact-form").reset();
       // console.log("Response: ", response);
     })
-    .catch((error) => console.log("Error: ", error));
+    .catch((error) => {
+      alert(`Error: ${error}`);
+      console.log("Error: ", error);
+    });
 }

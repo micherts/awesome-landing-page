@@ -122,23 +122,9 @@ git push -u origin main
 
 
 
-#S3 - Copy local files to S3
-#Get-S3Object -BucketName $App | Remove-S3Object -Verbose -Force
- $Files = Get-ChildItem | Where-Object {$_.Name -ne 'manage.ps1'}
- #$Files = Get-ChildItem | Where-Object {$_.Name -eq 'index.html'}
- ForEach ($File in $Files) {
-  $FileName = [System.IO.Path]::GetFileName($File)
-  If ($File.Mode -match "d") {
-    $Prefix = "$($File.FullName.ToString().replace($WL,''))\"
-    Write-S3Object -BucketName $App -Folder $File.FullName -KeyPrefix $Prefix -Recurse -Verbose -Force 
-  } else {
-  Write-S3Object -BucketName $App -Key $FileName -File $FileName -Verbose -Force 
-  }
- }
-
-# Update git **Note git used for backup only, S3 used for primary storage
+# Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated s3SyncWorkflow.yml to set exclude directories"
+git commit -m "updated contactus.js lambda url to use node script"
 git push origin master
 
 #Clone Git repo
