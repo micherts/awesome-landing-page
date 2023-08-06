@@ -82,13 +82,15 @@ function submitToAPI(e) {
     },
   })
     .then((response) => {
-      if (response === "200") {
+      if (response.httpStatusCode === 200) {
         alert(
           "Thank you for your interest in HospoSure, we look forward to chatting."
         );
         document.getElementById("contact-form").reset();
       } else {
-        alert(`Error: ${response}`);
+        alert(
+          `Oops something broke, sorry about that, please contact us at hello@hosposure.com.au instead.`
+        );
         console.log("Error: ", response);
       }
       // console.log("Response: ", response);

@@ -124,7 +124,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated contactus.js error handling"
+git commit -m "updated contactus.js error message"
 git push origin master
 
 #Clone Git repo
