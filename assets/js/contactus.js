@@ -82,10 +82,15 @@ function submitToAPI(e) {
     },
   })
     .then((response) => {
-      alert(
-        "Thank you for your interest in HospoSure, we look forward to chatting."
-      );
-      document.getElementById("contact-form").reset();
+      if (response === "200") {
+        alert(
+          "Thank you for your interest in HospoSure, we look forward to chatting."
+        );
+        document.getElementById("contact-form").reset();
+      } else {
+        alert(`Error: ${response}`);
+        console.log("Error: ", response);
+      }
       // console.log("Response: ", response);
     })
     .catch((error) => {
