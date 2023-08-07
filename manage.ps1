@@ -124,7 +124,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated contactus.js response handling"
+git commit -m "updated terms.html & privacy.html based on LegalVision discussions"
 git push origin master
 
 #Clone Git repo
