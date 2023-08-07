@@ -46,7 +46,7 @@ function submitToAPI(e) {
 
   // var name = $("#form_name").val();
   // var email = $("#form_email").val();
-  // var telephone = $("#form_telephone").val();
+  var telephone = $("#form_telephone").val();
   // var referral = $("#form_referral").val();
   // var owner = $("#form_owner").val();
   // var opening = $("#form_opening").val();
@@ -59,7 +59,7 @@ function submitToAPI(e) {
     subject: "HospoSure Contact Form",
     name: $("#form_name").val(),
     email: $("#form_email").val(),
-    // telephone: $("#form_telephone").val(),
+    telephone: $("#form_telephone").val(),
     // referral: $("#form_referral").val(),
     // owner: $("#form_owner").val(),
     // opening: $("#form_opening").val(),
