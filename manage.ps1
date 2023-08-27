@@ -124,7 +124,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated contactus form to include telephone"
+git commit -m "added fundamental to cafe model build time description"
 git push origin master
 
 #Clone Git repo

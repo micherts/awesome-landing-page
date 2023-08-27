@@ -17,9 +17,15 @@ function submitToAPI(e) {
 
   var emailRe = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
   if (!emailRe.test($("#form_email").val())) {
-    alert("Please enter valid email address");
+    alert("Please enter a valid email address");
     return;
   }
+
+  // var telRe = /[0-9\W]/;
+  // if (!telRe.test($("#form_telephone").val())) {
+  //   alert("Please enter a valid phone no");
+  //   return;
+  // }
 
   // var mandatory = /[A-Za-z0-9\W]/;
   // if (!mandatory.test($("#form_referral").val())) {
@@ -44,17 +50,6 @@ function submitToAPI(e) {
   //   return;
   // }
 
-  // var name = $("#form_name").val();
-  // var email = $("#form_email").val();
-  var telephone = $("#form_telephone").val();
-  // var referral = $("#form_referral").val();
-  // var owner = $("#form_owner").val();
-  // var opening = $("#form_opening").val();
-  // var experience = $("#form_experience").val();
-  // var financials = $("#form_financials").val();
-  // var costed = $("#form_costed").val();
-  // var costing = $("#form_costing").val();
-  // var message = $("#form_message").val();
   var data = {
     subject: "HospoSure Contact Form",
     name: $("#form_name").val(),
