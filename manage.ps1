@@ -125,7 +125,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "added testimonial for The Chai Room"
+git commit -m "created hamburger menu and relocated About Us page"
 git push origin master
 
 #Clone Git repo
