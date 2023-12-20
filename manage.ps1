@@ -125,7 +125,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "created hamburger menu and relocated About Us page"
+git commit -m "updated load sequence for stylesheets and scripts"
 git push origin master
 
 #Clone Git repo
