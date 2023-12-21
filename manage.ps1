@@ -121,11 +121,15 @@ git branch -M main
 git remote add origin git@github.com:micherts/hosposure.com.au.git
 git push -u origin main
 
-
+# Run local webserver
+Install-Module webserver
+Import-Module webserver
+Start-Webserver 
+Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://localhost:8080"
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated load sequence for stylesheets and scripts"
+git commit -m "exported nav bar to js with separate html, created partners section"
 git push origin master
 
 #Clone Git repo
