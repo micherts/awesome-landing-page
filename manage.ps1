@@ -124,12 +124,12 @@ git push -u origin main
 # Run local webserver
 Install-Module webserver
 Import-Module webserver
-Start-Webserver 
+Start-Webserver
 Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://localhost:8080"
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "exported nav bar to js with separate html, created partners section"
+git commit -m "created faq page"
 git push origin master
 
 #Clone Git repo
