@@ -75,7 +75,9 @@ h4,
 h5,
 .h5 {
   font-size: 18px;
-  margin-top: 45px;
+  /* margin-top: 45px; */
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 h6,
@@ -88,11 +90,13 @@ h6,
 p {
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 25px;
 }
 
 /*     General overwrite     */
 body {
   font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  /* color: red; */
 }
 
 a {
@@ -881,11 +885,12 @@ i {
 }
 
 .landing-page ol {
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
-.landing-page .section p {
-  margin-top: 30px;
+.landing-page .section p,
+.landing-page .section li {
+  /* margin-top: 30px; */
   line-height: 28px;
   font-size: 18px;
   font-weight: 200;
@@ -899,6 +904,7 @@ i {
 }
 .landing-page .img-container img {
   width: 100%;
+  margin: 25px 0;
 }
 .landing-page .section-testimonials .carousel-control {
   left: -70px;
@@ -998,6 +1004,12 @@ i {
   transition: opacity ease-in-out 0.7s;
   z-index: 2;
 }
+.landing-page .carousel-testimonial-caption h5 {
+  color: #9a9a9a;
+}
+/* .landing-page .carousel-testimonial-caption p {
+  color: #9a9a9a;
+} */
 
 .logo-container .logo {
   overflow: hidden;
@@ -1554,14 +1566,14 @@ i {
 .landing-page .section-features .card.card-red .icon i {
   color: #e01724;
 }
-.landing-page .section-features .card h4 {
-  font-weight: 300;
-  font-size: 18px;
-  margin: 30px 0 -15px;
+.landing-page .section-features .card h5 {
+  /* font-weight: 300;
+  font-size: 18px; */
+  margin-top: 0;
 }
 
 .landing-page .section-features .card p {
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 22px;
   color: #777;
 }
@@ -1600,7 +1612,7 @@ i {
   .carousel-testimonial-caption {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 25px auto 0;
 }
 
 .landing-page .section-testimonial .carousel-inner h3 {
@@ -1609,10 +1621,10 @@ i {
   line-height: 46px;
 }
 
-.landing-page .section-testimonial .carousel-inner p {
+/* .landing-page .section-testimonial .carousel-inner p {
   margin-top: 10px;
   color: #9a9a9a;
-}
+} */
 
 .landing-page .section-testimonial .carousel-control {
   color: #333;
@@ -2055,7 +2067,9 @@ i {
   padding: 0 3rem 0 0;
 }
 .list-display li {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  /* padding-left: 1rem;
+  font-size: 18px; */
   /* font-size: 1.1rem; */
 }
 .list-checkmarks {
@@ -2063,8 +2077,6 @@ i {
 }
 .list-checkmarks li {
   list-style-type: none;
-  padding-left: 1rem;
-  font-size: 18px;
 }
 .list-checkmarks li:before {
   font-family: "FontAwesome";
@@ -2084,9 +2096,9 @@ i {
   margin-top: 40px;
 }
 
-.text {
+/* .text {
   margin: 30px;
-}
+} */
 
 .carousel-header-hs {
   margin-top: 70px;
@@ -2186,3 +2198,7 @@ i {
 footer {
   margin: 30px;
 }
+
+/* .section .resources img {
+  width: 100%;
+} */
