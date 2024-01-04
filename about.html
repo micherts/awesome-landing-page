@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="HospoSure Pty Ltd" />
-    <meta name="description" content="About Us" />
-    <link rel="icon" type="image/png" href="favicon.ico" />
-    <title>About Us</title>
+    <meta
+      name="description"
+      content="HospoSure is a creative team of hospitality focused professionals on a mission to provide simple and useful management tools for the cafe business."
+    />
+    <title>About Us - HospoSure</title>
+    <link rel="canonical" href="https://hosposure.com.au/about.html" />
 
     <!-- FavIcon https://favicon.io -->
+    <!-- <link rel="icon" type="image/png" href="favicon.ico" /> -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -37,10 +41,55 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@48"
       rel="stylesheet"
     /> -->
-    <link href="assets/css/landing-page.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
   </head>
-  <body class="landing-page landing-page1">
-    <script id="nav" src="assets/js/nav.js"></script>
+
+  <body class="landing-page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="col-xs-6">
+          <a class="logo-container" href="index.html">
+            <img src="assets/img/hospoSureLogo.png" alt="HospoSure logo." />
+          </a>
+        </div>
+        <div class="col-xs-6 nav-hs">
+          <a
+            href="https://app.hosposure.com.au"
+            id="sign-in-button"
+            class="btn btn-fill btn-success"
+            data-button="success"
+            >Sign In</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse nav-inline"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="resources.html">Resources</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <div class="section">
       <div class="container">
@@ -90,7 +139,41 @@
         </p>
       </div>
     </div>
-    <script id="footer" src="assets/js/footer.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html"
+                  >HospoSure &copy; <span id="year">2023</span></a
+                >
+              </li>
+              <li>
+                <a href="privacy.html" target="_blank"> Privacy Policy </a>
+              </li>
+              <li>
+                <a href="terms.html" target="_blank"> Terms & Conditions </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="social-area">
+            <a
+              class="btn btn-social btn-simple"
+              href="https://www.linkedin.com/company/hosposure"
+            >
+              <i class="fa-brands fa-linkedin fa-2xl"></i>
+            </a>
+            <a
+              class="btn btn-social btn-simple"
+              href="https://www.youtube.com/@hosposureaus"
+            >
+              <i class="fa-brands fa-youtube fa-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -102,4 +185,7 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </html>

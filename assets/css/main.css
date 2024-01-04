@@ -1037,8 +1037,16 @@ i {
   max-width: 100%;
 }
 
-.landing-page1 .container {
+.landing-page .container {
   max-width: 970px;
+}
+
+.blog .section {
+  margin-top: 50px;
+}
+
+.blog .section .blog-post {
+  padding-top: 50px;
 }
 
 .landing-page2 .container {
@@ -2072,8 +2080,11 @@ i {
   font-size: 18px; */
   /* font-size: 1.1rem; */
 }
-.list-checkmarks {
+.landing-page .list-checkmarks {
   padding-left: 3.5rem;
+}
+.blog .list-checkmarks {
+  padding-left: 2.5rem;
 }
 .list-checkmarks li {
   list-style-type: none;
