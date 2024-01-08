@@ -39,36 +39,37 @@ td {
 }
 
 h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4 {
-  font-weight: 400;
-  margin: 0px 0 15px;
-}
-
-h1,
 .h1 {
-  font-size: 52px;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 200;
+  opacity: 0.9;
+  margin: 0 0 40px;
+  position: relative;
+  line-height: 24px;
 }
 
 h2,
 .h2 {
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 28px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin: 25px 0 20px;
 }
 
 h3,
 .h3 {
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: 400;
   margin: 20px 0 10px;
 }
 
 h4,
 .h4 {
   font-size: 22px;
+  font-weight: 400;
+  margin: 0px 0 15px;
   line-height: 30px;
 }
 
@@ -536,18 +537,16 @@ i {
 .section {
   position: relative;
   background-color: #ffffff;
-  margin-top: 100px;
+  padding: 30px;
 }
 
 .section-gray {
-  padding-top: 30px;
   margin-bottom: 0px;
   background-color: #eeeeee;
 }
 
 .section-white {
   background-color: #ffffff;
-  padding-top: 30px;
 }
 
 .navbar {
@@ -916,25 +915,13 @@ i {
   right: -40px;
   left: auto;
 }
-.landing-page .section-clients {
-  padding: 50px 0;
-}
-.landing-page .section-clients .info .icon {
-  background: transparent;
-}
-.landing-page .section-clients .icon i {
-  color: #aaaaaa;
-}
-.landing-page .section-clients h3 {
-  margin-top: 10px;
-}
 .landing-page .social-line {
   border-bottom: 1px solid #dddddd;
 }
 .landing-page .carousel-indicators {
   /* display: inline; */
   z-index: 0;
-  bottom: -50px;
+  bottom: -40px;
 }
 .landing-page .carousel-indicators button {
   /* margin: 1px 10px; */
@@ -1037,12 +1024,14 @@ i {
   max-width: 100%;
 }
 
-.landing-page .container {
+.container {
   max-width: 970px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-.blog .section {
-  margin-top: 50px;
+nav .container {
+  padding: 0 30px;
 }
 
 .blog .section .blog-post {
@@ -1054,13 +1043,14 @@ i {
 }
 
 .header-text {
-  text-transform: uppercase;
-  font-weight: 200;
-  /* color: #333; */
-  margin-bottom: 30px;
-  font-size: 30px;
+  text-align: center;
   position: relative;
-  line-height: 24px;
+  line-height: 120%;
+}
+
+h2.header-text {
+  text-transform: none;
+  font-size: 24px;
 }
 
 .landing-page .navbar-top {
@@ -1334,9 +1324,6 @@ i {
   padding-bottom: 0;
 }
 
-.landing-page .footer {
-  padding: 20px 0;
-}
 .landing-page .parallax .parallax-background {
   position: relative;
   z-index: 1;
@@ -1384,10 +1371,6 @@ i {
   margin-top: 100px;
   color: white;
   padding: 5px;
-}
-
-.landing-page .section-presentation .description {
-  padding: 50px 5px 0;
 }
 
 .landing-page .parallax .description h2 {
@@ -1443,7 +1426,6 @@ i {
   overflow: hidden;
   width: 100%;
   min-height: 600px;
-  /* margin-top: 30px; */
 }
 
 /* .landing-page .section-presentation img {
@@ -1496,7 +1478,7 @@ i {
 }
 
 .landing-page .section-demo {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 .landing-page .section-demo a {
@@ -1516,7 +1498,7 @@ i {
 }
 
 .landing-page .row {
-  margin-bottom: 50px;
+  margin: 25px 0;
 }
 
 .landing-page .section-demo .carousel-inner .carousel-item img {
@@ -1525,9 +1507,9 @@ i {
   width: 98%;
 }
 
-/* .landing-page .section-features {
-  margin: 50px 0;
-} */
+.landing-page .section-features {
+  text-align: center;
+}
 
 .landing-page .section-features .card {
   width: 100%;
@@ -1588,9 +1570,9 @@ i {
 
 .landing-page .section-testimonial {
   position: relative;
+  text-align: center;
   width: 100%;
   min-height: 450px;
-  padding: 80px 0px 100px;
 }
 .landing-page .section-testimonial .carousel {
   margin-top: 50px;
@@ -1617,9 +1599,20 @@ i {
   /* .section-testimonial */
   .carousel-inner
   .carousel-item
+  .carousel-showcase-caption {
+  text-align: center;
+  max-width: 700px;
+  margin: 25px auto 0;
+}
+
+.landing-page
+  /* .section-testimonial */
+  .carousel-inner
+  .carousel-item
   .carousel-testimonial-caption {
   text-align: center;
   max-width: 700px;
+  min-height: 170px;
   margin: 25px auto 0;
 }
 
@@ -2103,9 +2096,9 @@ i {
   /* padding-bottom: 15px; */
 }
 
-.section-contact {
+/* .section-contact {
   margin-top: 40px;
-}
+} */
 
 /* .text {
   margin: 30px;

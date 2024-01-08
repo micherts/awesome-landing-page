@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "expanded resources page, duplicated nav and footer across all 4 pages instead of using js, tweaked css, removed local copies of bootstrap css and fonts"
+git commit -m "updated css layout"
 git push origin master
 
 #Clone Git repo
