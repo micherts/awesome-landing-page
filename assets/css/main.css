@@ -1027,7 +1027,7 @@ i {
 .container {
   max-width: 970px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 nav .container {
@@ -1425,7 +1425,7 @@ h2.header-text {
 .landing-page .section-presentation {
   overflow: hidden;
   width: 100%;
-  min-height: 600px;
+  /* min-height: 600px; */
 }
 
 /* .landing-page .section-presentation img {
@@ -1509,6 +1509,7 @@ h2.header-text {
 
 .landing-page .section-features {
   text-align: center;
+  overflow: hidden;
 }
 
 .landing-page .section-features .card {
@@ -2116,29 +2117,30 @@ h2.header-text {
   border-radius: 0;
 }
 
-.image-hs {
+.features-img {
   max-width: 700px;
-  /* max-height: 500px; */
-  /* position: relative; */
   padding-top: 10px;
 }
 
-.image-hs img {
-  max-width: 100%;
-  /* max-height: 100%; */
+.features-img > img {
   border-radius: 15px;
   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.23);
-  width: 98%;
-  /* margin: auto;
-  position: absolute;
-  top: 50%; */
-  /* -ms-transform: translateY(-50%); */
-  /* transform: translateY(-50%); */
+  height: 330px;
 }
 
-.image2-hs img {
-  height: 600px;
-  /* padding-bottom: 70px; */
+@media (max-width: 767px) {
+  .presentation-text,
+  .features-text {
+    width: 100%;
+  }
+  .presentation-img,
+  .features-img {
+    display: none;
+  }
+}
+
+.presentation-img > img {
+  height: 500px;
 }
 
 .material-symbols-outlined {
