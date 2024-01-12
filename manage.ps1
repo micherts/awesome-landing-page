@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated Mr Yum to me&u, updated header text"
+git commit -m "added Contact Us link to nav"
 git push origin master
 
 #Clone Git repo
