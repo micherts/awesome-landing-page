@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "added Contact Us link to nav"
+git commit -m "updated index title tag"
 git push origin master
 
 #Clone Git repo
