@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated index.html modeling to modelling, updated index.html header text and description"
+git commit -m "updated colors & fonts to align to brand kit, changed button focus to match app shadow"
 git push origin master
 
 #Clone Git repo

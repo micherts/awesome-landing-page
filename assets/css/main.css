@@ -13,6 +13,14 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
+/*     General overwrite     */
+body {
+  /* font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif; */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #344767;
+  /* font-size: 14px; */
+}
+
 /*           Font Smoothing      */
 h1,
 .h1,
@@ -35,7 +43,7 @@ a,
 td {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif; */
 }
 
 h1,
@@ -43,7 +51,7 @@ h1,
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 200;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   margin: 0 0 40px;
   position: relative;
   line-height: 24px;
@@ -52,16 +60,16 @@ h1,
 h2,
 .h2 {
   /* font-size: 36px; */
-  font-size: 28px;
-  font-weight: 200;
+  font-size: 20px; /* 28px; */
+  font-weight: bold; /* 200; */
   text-transform: uppercase;
   margin: 25px 0 20px;
 }
 
 h3,
 .h3 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px; /* 18px; */
+  font-weight: bold; /* 400; */
   margin: 20px 0 10px;
 }
 
@@ -89,24 +97,22 @@ h6,
 }
 
 p {
-  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 25px;
+  font-size: 14px;
 }
-
-/*     General overwrite     */
-body {
-  font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif;
-  /* color: red; */
+li {
+  font-size: 14px;
 }
 
 a {
-  color: #4caf50;
+  color: #54af50;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #4caf50;
-  text-decoration: none;
+  color: #54af50;
+  /* text-decoration: underline; */
 }
 
 a:focus,
@@ -139,31 +145,34 @@ i {
 .btn {
   border-width: 2px;
   background-color: transparent;
-  font-weight: 400;
+  font-weight: bold; /* 400; */
+  font-size: 12px;
+  text-transform: uppercase;
   opacity: 0.8;
   filter: alpha(opacity=80);
   padding: 8px 16px;
-  border-color: #888888;
-  color: #888888;
+  border-color: #8596b8;
+  color: #8596b8;
 }
 .btn:hover,
 .btn:focus,
 .btn:active,
 .btn.active,
 .open > .btn.dropdown-toggle {
-  background-color: transparent;
-  color: #777777;
-  border-color: #777777;
+  /* background-color: transparent;
+  color: #7b809a;
+  border-color: #7b809a; */
+  box-shadow: var(--bs-box-shadow) !important;
 }
 .btn:disabled,
 .btn[disabled],
 .btn.disabled {
   background-color: transparent;
-  border-color: #888888;
+  border-color: #8596b8;
 }
 .btn.btn-fill {
   color: white;
-  background-color: #888888;
+  background-color: #8596b8;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -172,14 +181,14 @@ i {
 .btn.btn-fill:active,
 .btn.btn-fill.active,
 .open > .btn.btn-fill.dropdown-toggle {
-  background-color: #777777;
+  background-color: #7b809a;
   color: white;
 }
 .btn.btn-fill .caret {
   border-top-color: white;
 }
 .btn .caret {
-  border-top-color: #888888;
+  border-top-color: #8596b8;
 }
 .btn:hover,
 .btn:focus {
@@ -239,27 +248,27 @@ i {
 }
 
 .btn-success {
-  border-color: #3abe41;
-  color: #3abe41;
+  border-color: #54af50;
+  /* color: #54af50; */
 }
-.btn-success:hover,
+/* .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active,
 .open > .btn-success.dropdown-toggle {
   background-color: transparent;
-  color: #3abe41;
-  border-color: #34aa3a;
-}
+  color: #54af50;
+  border-color: #54af50;
+} */
 .btn-success:disabled,
 .btn-success[disabled],
 .btn-success.disabled {
   background-color: transparent;
-  border-color: #3abe41;
+  border-color: #54af50;
 }
 .btn-success.btn-fill {
   color: white;
-  background-color: #3abe41;
+  background-color: #54af50;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -268,14 +277,15 @@ i {
 .btn-success.btn-fill:active,
 .btn-success.btn-fill.active,
 .open > .btn-success.btn-fill.dropdown-toggle {
-  background-color: #34aa3a;
+  background-color: #54af50;
+  border-color: #54af50;
   color: white;
 }
 .btn-success.btn-fill .caret {
   border-top-color: white;
 }
 .btn-success .caret {
-  border-top-color: #3abe41;
+  border-top-color: #54af50;
 }
 
 .btn-info {
@@ -441,12 +451,12 @@ i {
 .btn-neutral.active,
 .open > .btn-neutral.dropdown-toggle {
   background-color: white;
-  color: #888888;
+  color: #8596b8;
 }
 .btn-neutral.btn-fill,
 .btn-neutral.btn-fill:hover,
 .btn-neutral.btn-fill:focus {
-  color: #888888;
+  color: #8596b8;
 }
 .btn-neutral.btn-simple:active,
 .btn-neutral.btn-simple.active {
@@ -542,7 +552,7 @@ i {
 
 .section-gray {
   margin-bottom: 0px;
-  background-color: #eeeeee;
+  background-color: #f0f2f5; /* #eeeeee; */
 }
 
 .section-white {
@@ -682,14 +692,14 @@ i {
   font-weight: normal;
 }
 .footer nav > ul a:not(.btn) {
-  color: #9a9a9a;
+  color: #8596b8;
   display: block;
   margin-bottom: 3px;
 }
-.footer nav > ul a:not(.btn):hover,
+/* .footer nav > ul a:not(.btn):hover,
 .footer nav > ul a:not(.btn):focus {
-  color: #777777;
-}
+  color: #7b809a;
+} */
 .footer .social-area {
   padding: 15px 0;
   margin: auto;
@@ -710,10 +720,10 @@ i {
 }
 .footer .social-area > a:not(.btn):hover,
 .footer .social-area > a:not(.btn):focus {
-  color: #777777;
+  color: #7b809a;
 }
 .footer .copyright {
-  color: #777777;
+  color: #7b809a;
   padding: 10px 15px;
   margin: 15px 3px;
   line-height: 20px;
@@ -724,14 +734,14 @@ i {
   border-color: #dddddd;
 }
 .footer .title {
-  color: #777777;
+  color: #7b809a;
 }
 
 .footer:not(.footer-big) nav > ul {
   font-size: 16px;
 }
 .footer:not(.footer-big) nav > ul li {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   float: left;
 }
 .footer:not(.footer-big) nav > ul a {
@@ -883,16 +893,16 @@ i {
   top: 0;
 }
 
-.landing-page ol {
-  /* font-weight: 300; */
-}
+/* .landing-page ol {
+   font-weight: 300; 
+} */
 
 .landing-page .section p,
 .landing-page .section li {
   /* margin-top: 30px; */
   line-height: 28px;
-  font-size: 18px;
-  font-weight: 200;
+  /* font-size: 18px;
+  font-weight: 200; */
 }
 .landing-page .section-description h5 {
   margin-top: 40px;
@@ -925,10 +935,10 @@ i {
 }
 .landing-page .carousel-indicators button {
   /* margin: 1px 10px; */
-  background-color: #888888;
+  background-color: #8596b8;
 }
 .landing-page .carousel-indicators .active {
-  background-color: #888888;
+  background-color: #8596b8;
 }
 .landing-page .carousel-indicators.carousel-indicators-blue li {
   border-color: #00bbff;
@@ -937,10 +947,10 @@ i {
   background-color: #00bbff;
 }
 .landing-page .carousel-indicators.carousel-indicators-green li {
-  border-color: #3abe41;
+  border-color: #54af50;
 }
 .landing-page .carousel-indicators.carousel-indicators-green .active {
-  background-color: #3abe41;
+  background-color: #54af50;
 }
 .landing-page .carousel-indicators.carousel-indicators-orange li {
   border-color: #ffa17f;
@@ -1048,10 +1058,10 @@ nav .container {
   line-height: 120%;
 }
 
-h2.header-text {
+/* h2.header-text {
   text-transform: none;
   font-size: 24px;
-}
+} */
 
 .landing-page .navbar-top {
   position: static;
@@ -1415,7 +1425,7 @@ h2.header-text {
   display: block;
   width: 100%;
   margin: 0px auto;
-  padding-top: 48px;
+  /* padding-top: 48px; */
 }
 .landing-page .logos li {
   display: inline-block;
@@ -1543,7 +1553,7 @@ h2.header-text {
   border-color: #bdf8c0;
 }
 .landing-page .section-features .card.card-green .icon i {
-  color: #3abe41;
+  color: #54af50;
 }
 .landing-page .section-features .card.card-orange {
   border-color: #fad9cd;
@@ -1557,7 +1567,7 @@ h2.header-text {
 .landing-page .section-features .card.card-red .icon i {
   color: #e01724;
 }
-.landing-page .section-features .card h5 {
+.landing-page .section-features .card h3 {
   /* font-weight: 300;
   font-size: 18px; */
   margin-top: 0;
@@ -1566,7 +1576,7 @@ h2.header-text {
 .landing-page .section-features .card p {
   /* font-size: 16px; */
   line-height: 22px;
-  color: #777;
+  /* color: #777; */
 }
 
 .landing-page .section-testimonial {
@@ -1617,11 +1627,11 @@ h2.header-text {
   margin: 25px auto 0;
 }
 
-.landing-page .section-testimonial .carousel-inner h3 {
+/* .landing-page .section-testimonial .carousel-inner h3 {
   font-weight: 300;
   font-size: 30px;
   line-height: 46px;
-}
+} */
 
 /* .landing-page .section-testimonial .carousel-inner p {
   margin-top: 10px;
@@ -1752,7 +1762,7 @@ h2.header-text {
   background-color: #ffa17f;
 }
 .fixed-plugin .badge-green {
-  background-color: #3abe41;
+  background-color: #54af50;
 }
 .fixed-plugin .badge-blue {
   background-color: #2ca8ff;
@@ -1848,7 +1858,7 @@ h2.header-text {
 .fixed-plugin .dropdown-menu > li.active > a p,
 .fixed-plugin .dropdown-menu > li > a p,
 .fixed-plugin .dropdown-menu > li.active > a:focus p {
-  color: #777777;
+  color: #7b809a;
 }
 
 .fixed-plugin .dropdown-menu > li > a:hover p {
@@ -2086,13 +2096,14 @@ h2.header-text {
 .list-checkmarks li:before {
   font-family: "FontAwesome";
   font-size: 30px;
-  content: "\f00c";
+  content: "\f046";
   margin: 0 10px 0 -28px;
-  color: #4caf50;
+  /* padding-top: 20px; */
+  color: #54af50;
 }
 
 .navbar {
-  background-color: white;
+  background-color: #f0f2f5; /* white; */
   /* background-color: rgba(33, 33, 33, 0.5); */
   /* padding-bottom: 15px; */
 }
@@ -2119,7 +2130,7 @@ h2.header-text {
 
 .features-img {
   max-width: 700px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .features-img > img {
@@ -2145,7 +2156,7 @@ h2.header-text {
 
 .material-symbols-outlined {
   font-size: 60px;
-  color: #4caf50;
+  color: #54af50;
 }
 
 #sign-up-button {

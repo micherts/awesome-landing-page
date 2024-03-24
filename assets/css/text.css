@@ -1,12 +1,18 @@
 /* Terms & Privacy */
-a {
-  color: #4caf50;
+body {
+  /* font-family: "Helvetica Neue", "Open Sans", Arial, sans-serif; */
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #344767;
+  font-size: 14px;
 }
-a:hover,
-a:focus {
-  color: #4caf50;
+a {
+  color: #54af50;
   text-decoration: none;
 }
+/* a:hover,
+a:focus {
+  color: #489450;
+} */
 a:focus,
 a:active {
   outline: 0;
@@ -15,16 +21,18 @@ body {
   margin: 30px;
 }
 h1 {
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: bold;
 }
 h2 {
-  font-size: 25px;
+  font-size: 16px;
+  font-weight: bold;
 }
-p,
+/* p,
 ol,
 ul {
   font-size: 15px;
-}
+} */
 table {
   border-color: black;
   border-style: solid;
