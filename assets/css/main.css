@@ -587,7 +587,8 @@ i {
 }
 .navbar .btn {
   margin: 15px 3px;
-  font-size: 14px;
+  padding-top: 10px;
+  /* font-size: 14px; */
 }
 .navbar .btn-simple {
   font-size: 16px;
