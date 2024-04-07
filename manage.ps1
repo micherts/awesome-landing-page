@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "updated icons assets to svg"
+git commit -m "updated icons assets to png"
 git push origin master
 
 #Clone Git repo
