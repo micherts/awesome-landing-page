@@ -129,7 +129,7 @@ Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://lo
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "added assets\email\account-verified.png"
+git commit -m "updated assets\email\account-verified.png"
 git push origin master
 
 #Clone Git repo
