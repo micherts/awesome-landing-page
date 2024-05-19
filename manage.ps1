@@ -112,25 +112,9 @@ $Records | ft
 
 #Create R53 Record to route apex domain to S3 bucket
 
-# Initialise git
-git init
-git add .
-git commit -m "first commit"
-git branch -M main
-# Manually create new repo on Github
-git remote add origin git@github.com:micherts/hosposure.com.au.git
-git push -u origin main
-
 # Run local webserver
 Install-Module webserver
 Import-Module webserver
 Start-Webserver
 Start-Process "C:\Program Files\Google\Chrome\Application\chrome.exe" "http://localhost:8080"
 
-# Update git **Note git workflow syncs to S3
-git add .
-git commit -m "updated assets\email\account-verified.png"
-git push origin master
-
-#Clone Git repo
-git clone git@github.com:micherts/awesome-landing-page.git
