@@ -9,7 +9,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "added assets\email\subscription-started.png"
+git commit -m "added assets\email\linkedin-brands.png"
 git push origin master
 
 #Clone Git repo
