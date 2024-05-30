@@ -9,7 +9,7 @@ git push -u origin main
 
 # Update git **Note git workflow syncs to S3
 git add .
-git commit -m "added assets\email\<multiple images>"
+git commit -m "added assets\email\<three images>"
 git push origin master
 
 #Clone Git repo
